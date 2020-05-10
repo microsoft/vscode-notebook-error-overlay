@@ -11,7 +11,11 @@ let manager: IErrorOverlayManager;
 if (process.env.NODE_ENV === 'development') {
   manager = new ErrorOverlayManager();
 } else {
-  manager = { install: () => undefined, wrap: <T>(t: T) => t, uninstall: () => undefined };
+  manager = {
+    install: () => undefined,
+    wrap: <T>(_: HTMLElement, t: () => T) => t(),
+    uninstall: () => undefined,
+  };
 }
 
 export default manager;
