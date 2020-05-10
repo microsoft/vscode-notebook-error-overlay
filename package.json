@@ -1,0 +1,49 @@
+{
+  "name": "vscode-notebook-error-overlay",
+  "description": "Provides a notebook-aware error overlay in VS Code notebooks built with the webpack-dev-server",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/vscode-notebook-error-overlay.git"
+  },
+  "author": "Connor Peet <connor@peet.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/microsoft/vscode-notebook-error-overlay/issues"
+  },
+  "homepage": "https://github.com/microsoft/vscode-notebook-error-overlay#readme",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepublishOnly": "rimraf dist && npm run compile",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "test": "npm run test:lint && npm run test:fmt",
+    "test:lint": "eslint \"src/**/*.ts\"",
+    "test:fmt": "prettier --list-different \"src/**/*.ts\"",
+    "fmt": "prettier --write \"src/**/*.ts\"&& npm run test:lint -- --fix"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-header": "^3.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "preact": "^10.4.1",
+    "vscode-webview-tools": "^0.1.0"
+  }
+}

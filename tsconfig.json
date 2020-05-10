@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "outDir": "dist",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "rootDir": "src",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "jsxFactory": "h"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
