@@ -3,7 +3,7 @@
  *--------------------------------------------------------*/
 
 import { render, h } from 'preact';
-import { Overlay, ErrorSource } from './ui';
+import { Overlay, ErrorSource } from './ui.js';
 
 const isPromiseLike = <T extends unknown>(x: unknown): x is PromiseLike<T> =>
   typeof x === 'object' && !!x && typeof (x as PromiseLike<T>).then === 'function';
@@ -96,7 +96,7 @@ export class ErrorOverlayManager implements IErrorOverlayManager {
         );
       }
     } catch (err) {
-      this.displayErrorIn(container, [err], ErrorSource.Runtime, retry);
+      this.displayErrorIn(container, [err as Error], ErrorSource.Runtime, retry);
     }
 
     return undefined;

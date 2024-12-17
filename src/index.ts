@@ -2,9 +2,11 @@
  * Copyright (C) Microsoft Corporation. All rights reserved.
  *--------------------------------------------------------*/
 
-import { IErrorOverlayManager, ErrorOverlayManager } from './overlay';
+import { IErrorOverlayManager, ErrorOverlayManager } from './overlay.js';
 
 let manager: IErrorOverlayManager;
+
+declare const process: { env: { NODE_ENV?: string } };
 
 // This conditional will be checked by webpack so the error overlay isn't
 // included in the production build:

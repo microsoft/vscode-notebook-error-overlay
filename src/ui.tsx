@@ -106,7 +106,7 @@ const ErrorMessage: FunctionComponent<{ error: string }> = ({ error }) => (
       fontWeight: colors[Color.EditorFontWeight],
       width: '100%',
       overflowX: 'auto',
-      lineHeight: '1.5em'
+      lineHeight: '1.5em',
     }}
   >
     {error.split('\n').map((line, i) => (
