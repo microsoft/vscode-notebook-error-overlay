@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "es6",
+    "target": "ES2023",
     "outDir": "dist",
-    "lib": ["es6", "dom"],
+    "lib": ["ES2023", "dom"],
     "sourceMap": true,
     "rootDir": "src",
     "strict": true,
@@ -13,7 +13,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "jsx": "react",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "jsxFactory": "h"
   },
   "include": ["src"],
